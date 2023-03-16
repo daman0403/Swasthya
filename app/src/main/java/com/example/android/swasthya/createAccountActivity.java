@@ -61,7 +61,6 @@ public class createAccountActivity extends AppCompatActivity {
             }
         });
         createAccountBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 if(TextUtils.isEmpty(otp.getText().toString())){

@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/drawable/ic_baseline_local_hospital_24.xml" value="0.2484375" />
+        <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2484375" />
         <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/drawable/rounder_corners.xml" value="0.2484375" />
         <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_create_account.xml" value="0.23229166666666667" />
-        <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_heart_doctor.xml" value="0.16621376811594202" />
+        <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_splash.xml" value="0.1793478260869565" />
+        <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/heart_doctor_rcl_item.xml" value="0.22871376811594202" />
       </map>
     </option>
   </component>

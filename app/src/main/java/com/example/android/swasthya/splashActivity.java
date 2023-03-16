@@ -23,16 +23,20 @@ public class splashActivity extends AppCompatActivity {
                     startActivity(new Intent(splashActivity.this,MainActivity.class));
                 }
             },2000);
-            finish();
+
+//            finish();
         }
         else{
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    startActivity(new Intent(splashActivity.this,createAccountActivity.class));
+                    startActivity(new Intent(splashActivity.this,createAccountActivity.class)); //change MainActivity to createAccountActivity
                 }
             },2000);
-            finish();
+//            finish();
+
         }
+//        finish();
     }
+
 }

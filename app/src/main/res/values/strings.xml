@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">swasthya</string>
+    <string name="heart_symptoms">Chest pain, shortness of breath, palpitations, light headedness or fainting, swelling in the legs or ankles</string>
+    <string name="brain_symptoms">Persistent headaches, seizures, memory loss, difficulty with speech or movement, vision problems</string>
+    <string name="cancer_related_symptoms">Unexplained weight loss, fatigue, persistent cough or hoarseness, abnormal bleeding, changes in bowel or bladder habits</string>
+    <string name="infant_emergency_symptoms">High fever, persistent vomiting or diarrhea, difficulty breathing, ear pain or discharge, unexplained rash</string>
+    <string name="pregrency_relatedEmergency_symptoms">Abnormal bleeding, pelvic pain or pressure, changes in menstrual patterns, breast lumps or discharge, urinary incontinence</string>
 </resources>
