@@ -124,6 +124,14 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="@string/infant_emergency_symptoms"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
         </LinearLayout>
     </LinearLayout>
         <LinearLayout
@@ -153,14 +161,6 @@
                     android:textStyle="bold"
                     android:paddingTop="20dp"
                     android:gravity="center_horizontal"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/infant_emergency_symptoms"
-                    android:paddingTop="2dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
 
             </LinearLayout>
         </LinearLayout>

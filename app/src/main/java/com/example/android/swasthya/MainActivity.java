@@ -1,18 +1,26 @@
 package com.example.android.swasthya;
 
 import androidx.activity.OnBackPressedDispatcherOwner;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.media.audiofx.Equalizer;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -31,16 +39,16 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements LocationListener {
 
     LinearLayout heartDoctorLL;
     FirebaseFirestore firebaseFirestoredb;
-    FirebaseAuth firebaseAuth;
+
     String userID;
     String locationAdress;
-    double longitude;
-    double latitude;
+
     ProgressDialog progressDialog;
+    LocationManager locationManager;
 //    FusedLocationProviderClient fusedLocationProviderClient;
 //    private final static int locationREQUEST_CODE = 100;
 
@@ -53,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
         heartDoctorLL = findViewById(R.id.heart_ll_main_activity);
         firebaseFirestoredb = FirebaseFirestore.getInstance();
+        if(ContextCompat.checkSelfPermission(MainActivity.this , Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this , new String[]{Manifest.permission.ACCESS_FINE_LOCATION } , 100);
+
+        }else{
+            getCurrentLocation();
+        }
 //        firebaseAuth = FirebaseAuth.getInstance();
 //        userID = firebaseAuth.getCurrentUser().getUid().toString();
 ////        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -160,5 +174,40 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finishAffinity();
+    }
+
+//
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+
+
+            Toast.makeText(this , location.getLatitude()+" "+location.getLatitude(),Toast.LENGTH_SHORT).show();
+
+
+    }
+    @SuppressLint("MissingPermission")
+    public void getCurrentLocation(){
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER , 500 , 0 , MainActivity.this);
+        }else{
+
+            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+
+
+        }
+
+
+
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 100 && grantResults[0] == 100) {
+getCurrentLocation();
+        }
     }
 }

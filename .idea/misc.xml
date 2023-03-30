@@ -11,10 +11,15 @@
         <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/activity_splash.xml" value="0.1793478260869565" />
         <entry key="..\:/EmergencyTracking/swasthya/app/src/main/res/layout/heart_doctor_rcl_item.xml" value="0.22871376811594202" />
+        <entry key="..\:/Users/shiva/Desktop/project/Swasthya/app/src/main/res/layout/activity_create_account.xml" value="0.2" />
+        <entry key="..\:/Users/shiva/Desktop/project/Swasthya/app/src/main/res/layout/activity_heart_doctor.xml" value="0.1078125" />
+        <entry key="..\:/Users/shiva/Desktop/project/Swasthya/app/src/main/res/layout/activity_main.xml" value="0.1078125" />
+        <entry key="..\:/Users/shiva/Desktop/project/Swasthya/app/src/main/res/layout/activity_splash.xml" value="0.176" />
+        <entry key="..\:/Users/shiva/Desktop/project/Swasthya/app/src/main/res/layout/heart_doctor_rcl_item.xml" value="0.264" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
